@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, request, jsonify, redirect
 app = Flask(__name__)
 
-# 환경변수에서 PORT 값을 가져오고, 없으면 기본값 5000을 사용
+# 환경변수에서 PORT 값을 가져오고, 없으면 기본값 5000을 사용함.
 port = int(os.environ.get("PORT", 5000))
 
 @app.route('/')
@@ -31,7 +31,10 @@ def oldPage():
     egg = request.form.get('shh')
     if egg == "old":
         return render_template('hidden_index.html')
+    
+@app.route('/bomb')
+def bomb():
+    return render_template('bomb.html')
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=port)  # 여기서 포트를 설정합니다.
-
