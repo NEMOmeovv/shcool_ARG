@@ -11,7 +11,7 @@ let functionId = setInterval(function() {
     }
 }, 1000);
 userInputEle.addEventListener('keydown', function(event) {
-    if (event.key === "Enter" && userInputEle.value === "yellow") {
+    if (event.key === "Enter" && userInputEle.value === "daisy") {
         clearInterval(functionId);
         timerDisplay.textContent = "Yes you did it !";
     }
