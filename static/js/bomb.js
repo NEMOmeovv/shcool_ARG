@@ -6,7 +6,8 @@ let functionId = setInterval(function() {
     console.log(counter);
     timerDisplay.textContent = counter;
     if (counter === 0) {
-        timerDisplay.textContent = "Boom ";
+        window.location.replace("/jump");
+        
         clearInterval(functionId);
     }
 }, 1000);

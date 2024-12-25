@@ -29,12 +29,16 @@ def contact():
 @app.route('/oldPage', methods=["POST"])
 def oldPage():
     egg = request.form.get('shh')
-    if egg == "old":
+    if egg == "sally":
         return render_template('hidden_index.html')
     
 @app.route('/bomb')
 def bomb():
     return render_template('bomb.html')
+
+@app.route('/jump')
+def jump():
+    return render_template('jumpscareDemo.html')
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=port)  # 여기서 포트를 설정합니다.
