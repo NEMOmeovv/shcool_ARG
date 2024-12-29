@@ -26,8 +26,11 @@ def pricing():
 def contact():
     return render_template('contact.html')
 
+@app.route('/here')
+def here():
+    return render_template("here.html")
 
-@app.route('/hidden_index.html', methods=["POST"])
+@app.route('/oldPage', methods=["POST"])
 def oldPage():
     # POST 요청에서 'shh' 값을 가져옴
     egg = request.form.get('shh')

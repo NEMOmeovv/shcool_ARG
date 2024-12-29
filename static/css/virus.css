@@ -1,9 +1,28 @@
+/* 키보드 입력 화면 스타일 */
+#interactive-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 화면 전체 높이 */
+  background-color: #000; /* 검정 배경 */
+  color: #f96d00; /* 주황색 텍스트 */
+  font-family: 'Poppins', sans-serif;
+}
+
 #input-display {
-    font-size: 2em;
-    letter-spacing: 0.5em;
-    text-align: center;
-    color: red; /* 기본 입력 색상 */
-  }
+  font-family: monospace;
+  font-size: 4rem; /* 큰 글자 크기 */
+  letter-spacing: 10px;
+  text-align: center;
+  color: red; /* 기본 입력 중 붉은색 */
+}
+
+#message {
+  font-size: 1.5rem; /* 메시지 글자 크기 */
+  margin-top: 1rem;
+}
+
   #input-display.success {
     color: green; /* 성공 시 색상 */
   }
