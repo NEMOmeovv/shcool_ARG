@@ -1,0 +1,15 @@
+#input-display {
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    text-align: center;
+    color: red; /* 기본 입력 색상 */
+  }
+  #input-display.success {
+    color: green; /* 성공 시 색상 */
+  }
+  #input-display.error {
+    color: red; /* 실패 시 색상 */
+  }
+  #input-display.checking {
+    color: orange; /* 확인 중 색상 */
+  }

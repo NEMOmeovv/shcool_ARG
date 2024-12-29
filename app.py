@@ -27,7 +27,7 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route('/oldPage', methods=["POST"])
+@app.route('/hidden_index.html', methods=["POST"])
 def oldPage():
     # POST 요청에서 'shh' 값을 가져옴
     egg = request.form.get('shh')
@@ -38,13 +38,9 @@ def oldPage():
     # 값이 "sally"인 경우 정상적으로 렌더링
     return render_template('hidden_index.html')
 
-@app.route('/bomb')
+@app.route('/bomb.html')
 def bomb():
     return render_template('bomb.html')
-
-@app.route('/jump')
-def jump():
-    return render_template('jumpscareDemo.html')
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=port)  # 여기서 포트를 설정합니다.
