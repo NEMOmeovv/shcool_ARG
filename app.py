@@ -26,13 +26,22 @@ def pricing():
 def contact():
     return render_template('contact.html')
 
+@app.route('/here')
+def here():
+    return render_template("here.html")
+
 @app.route('/oldPage', methods=["POST"])
 def oldPage():
+    # POST 요청에서 'shh' 값을 가져옴
     egg = request.form.get('shh')
-    if egg == "old":
-        return render_template('hidden_index.html')
-    
-@app.route('/bomb')
+
+    # 값이 "sally"가 아닌 경우 아무것도 하지 않고 현재 페이지에 머무름
+    if egg != "sally":
+        return "", 204  # 204 No Content 상태 코드 반환
+    # 값이 "sally"인 경우 정상적으로 렌더링
+    return render_template('hidden_index.html')
+
+@app.route('/bomb.html')
 def bomb():
     return render_template('bomb.html')
 
