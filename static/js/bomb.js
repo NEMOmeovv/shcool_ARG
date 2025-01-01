@@ -39,7 +39,7 @@ document.addEventListener("click", function startCountdown() {
     userInputEle.addEventListener("keydown", function (event) {
         if (event.key === "Enter" && userInputEle.value === "daisy") {
             clearInterval(functionId);
-            timerDisplay.textContent = "Yes you did it !";
+            timerDisplay.textContent = "Yes you did it ! \n  v=5xt9ptCH8-4";
         }
     });
 });

@@ -26,12 +26,8 @@ def pricing():
 def contact():
     return render_template('contact.html')
 
-@app.route('/here')
-def here():
-    return render_template("here.html")
-
-@app.route('/oldPage', methods=["POST"])
-def oldPage():
+@app.route('/hidden_index.html', methods=["Get","POST"])
+def hidden_index():
     # POST 요청에서 'shh' 값을 가져옴
     egg = request.form.get('shh')
 
@@ -40,6 +36,10 @@ def oldPage():
         return "", 204  # 204 No Content 상태 코드 반환
     # 값이 "sally"인 경우 정상적으로 렌더링
     return render_template('hidden_index.html')
+
+@app.route('/hidden_services.html')
+def hidden_service():
+    return render_template('hidden_services.html')
 
 @app.route('/bomb.html')
 def bomb():

@@ -30,7 +30,7 @@ const targetWord = "VIRUS"; // 정답 단어
           display.className = "success";
 
             setTimeout(() => {
-                display.textContent = "TEST";
+                display.textContent = "be.com/watch?";
                 display.className = "success";
             }, 2000);
 
