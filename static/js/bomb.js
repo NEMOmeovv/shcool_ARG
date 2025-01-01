@@ -12,18 +12,6 @@ document.addEventListener("click", function startCountdown() {
 
     // 카운트다운 시작
     timerDisplay.textContent = counter;
-<<<<<<< HEAD
-    if (counter === 0) {
-        timerDisplay.textContent = "Boom ";
-        clearInterval(functionId);
-    }
-}, 1000);
-userInputEle.addEventListener('keydown', function(event) {
-    if (event.key === "Enter" && userInputEle.value === "daisy") {
-        clearInterval(functionId);
-        timerDisplay.textContent = "Yes you did it !";
-    }
-=======
     let functionId = setInterval(function () {
         counter = counter - 1;
         console.log(counter);
@@ -54,5 +42,4 @@ userInputEle.addEventListener('keydown', function(event) {
             timerDisplay.textContent = "Yes you did it !";
         }
     });
->>>>>>> 510cf41a5cfe0dfe4f22735d3413dac3fa843d38
 });
